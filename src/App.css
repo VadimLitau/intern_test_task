@@ -1,0 +1,292 @@
+/* Основные настройки стилей */
+body {
+	background-color: #f3e8ff; /* Фиолетовый светлый фон */
+	font-family: "Arial", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+/* Сетка для карточек */
+.cards-container {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(250px, 1fr)
+	); /* Плитка для карточек */
+	gap: 20px;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Стили для карточки */
+.user-card {
+	background-color: #7a45ff; /* Темно-фиолетовый цвет */
+	color: white;
+	border-radius: 10px;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.user-card:hover {
+	transform: scale(1.05); /* Эффект при наведении */
+}
+
+/* Кнопка лайка */
+.user-card button {
+	background-color: #a066ff; /* Лайтово-фиолетовая кнопка */
+	border: none;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.user-card button:hover {
+	background-color: #d1a3ff; /* При наведении кнопка светлеет */
+}
+
+/* Лайкнутая кнопка */
+.user-card button.liked {
+	background-color: #ff007f; /* Розовый для лайкнутых карточек */
+}
+
+/* Стили для заголовков карточек */
+.user-card h3 {
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+/* Центрируем содержимое */
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+/* Стили для кнопок фильтра */
+.filter-buttons,
+.user-detail-page {
+	display: flex;
+	gap: 10px;
+	margin: 20px 0; /* Добавляет отступ сверху и снизу */
+	padding-top: 20px;
+}
+.filter-buttons button,
+.user-detail-page button {
+	background-color: #7a45ff; /* Темно-фиолетовый цвет */
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 0 5px;
+	transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover,
+.user-detail-page button:hover {
+	background-color: #5a2d91; /* Более темный фиолетовый при наведении */
+}
+
+/* Основной контейнер страницы */
+.page-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	min-height: 100vh; /* Обеспечивает, что страница занимает всю высоту экрана */
+}
+
+.filter-buttons button {
+	background-color: #7a45ff; /* Темно-фиолетовый цвет */
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+	background-color: #5a2d91; /* Более темный фиолетовый при наведении */
+}
+
+/* Фиксированное расположение карточек */
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	max-width: 1200px; /* Ограничение ширины контейнера карточек */
+	width: 100%;
+}
+
+/* Стили для карточек */
+.user-card {
+	background-color: #7a45ff; /* Темно-фиолетовый цвет */
+	color: white;
+	border-radius: 10px;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+	height: 250px; /* Фиксированная высота карточки */
+	width: 200px; /* Ширина карточки */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* Равномерное распределение элементов */
+	cursor: pointer;
+}
+
+.user-card:hover {
+	transform: scale(1.05); /* Эффект при наведении */
+}
+
+/* Кнопка лайка */
+.user-card button {
+	background-color: #a066ff; /* Лайтово-фиолетовая кнопка */
+	border: none;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 5px;
+	transition: background-color 0.3s ease;
+	width: 80%;
+}
+
+.user-card button:hover {
+	background-color: #d1a3ff; /* При наведении кнопка светлеет */
+}
+
+/* Лайкнутая кнопка */
+.user-card button.liked {
+	background-color: #ff007f; /* Розовый для лайкнутых карточек */
+}
+
+/* Стили для заголовков карточек */
+.user-card h3 {
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+/* Контент карточек */
+.card-content {
+	font-size: 14px;
+	color: white;
+	margin: 10px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4; /* Максимальное количество строк текста */
+	-webkit-box-orient: vertical;
+}
+
+/* Общие стили для карточек */
+.user-card {
+	background-color: #7a45ff; /* Темно-фиолетовый цвет */
+	color: white;
+	border-radius: 10px;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+	height: 250px; /* Фиксированная высота карточки */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* Равномерное распределение элементов */
+}
+
+.user-card img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+/* Стили для страницы деталей */
+.user-detail-page {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.user-detail-page button {
+	width: 30%;
+}
+.user-detail-card {
+	background-color: #7a45ff;
+	color: white;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+.user-detail-card img {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	margin-bottom: 15px;
+}
+
+/* Стили для страницы создания пользователя */
+.create-user-page {
+	padding: 20px;
+	max-width: 600px;
+	margin: auto;
+}
+
+.create-user-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #7a45ff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+button:hover {
+	background-color: #6a3cbf;
+}
