@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -43,7 +44,7 @@ export const UsersPage = () => {
 	useEffect(() => {
 		const loadUsers = async () => {
 			const fetchedUsers = await fetchUsers();
-			fetchedUsers.forEach((user) => addUser(user));
+			fetchedUsers.forEach((user: any) => addUser(user));
 		};
 		users.length === 0 ? loadUsers() : "";
 	}, []);
